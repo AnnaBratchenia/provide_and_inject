@@ -6,15 +6,13 @@
       v-bind:id="topic.id"
       v-bind:title="topic.title"
       v-bind:description="topic.description"
-      v-on:select-topic="$emit('select-topic', $event)"
     >
     </knowledge-element>
   </div>
 </template>
 <script>
 export default {
-  props: ["topics"],
-  emits: ["select-topic"],
+  inject: ["topics"],
 };
 </script>
 <style>

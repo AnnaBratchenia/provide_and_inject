@@ -2,15 +2,13 @@
   <div class="Knowledge_element">
     <h2 class="element_title">{{ title }}</h2>
     <p class="element-description">{{ description }}</p>
-    <button class="btn" v-on:click="$emit('select-topic', id)">
-      Learn more
-    </button>
+    <button class="btn" v-on:click="selectTopic(id)">Learn more</button>
   </div>
 </template>
 
 <script>
 export default {
-  emits: ["select-topic"],
+  inject: ["selectTopic"],
   props: ["title", "description", "id"],
 };
 </script>

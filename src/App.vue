@@ -45,6 +45,12 @@ export default {
       activeTopic: null,
     };
   },
+  provide() {
+    return {
+      topics: this.topics,
+      selectTopic: this.activateTopic,
+    };
+  },
   methods: {
     activateTopic(topicID) {
       this.activeTopic = this.topics.find((topic) => topic.id === topicID);

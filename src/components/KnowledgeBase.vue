@@ -1,18 +1,12 @@
 <template>
   <div class="knowledge_base">
     <p class="base_title">Select a topic</p>
-    <knowledge-grid
-      v-bind:topics="topics"
-      v-on:select-topic="$emit('select-topic', $event)"
-    ></knowledge-grid>
+    <knowledge-grid></knowledge-grid>
   </div>
 </template>
 
 <script>
-export default {
-  props: ["topics"],
-  emits: ["select-topic"],
-};
+export default {};
 </script>
 <style>
 .knowledge_base {
